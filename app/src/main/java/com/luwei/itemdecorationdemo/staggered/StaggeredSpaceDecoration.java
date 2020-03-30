@@ -111,9 +111,14 @@ public class StaggeredSpaceDecoration extends RecyclerView.ItemDecoration {
         if (isFirstRaw(adapterPos, spanIndex)) {
             outRect.left = mLeft;
         }
-        if (isLastRaw(spanIndex)){
-            outRect.right = mRight;
-        }
+        // 有bug
+//         if (isLastRaw(spanIndex)){
+//             outRect.right = mRight;
+//         }
+        
+        // 底部如果想加 padding,可以再布局中recyclerView加 (临时解决)
+//         android:paddingBottom="80dp"
+//         android:clipToPadding="false"
     }
 
 
